@@ -1,0 +1,283 @@
+/* site.css */
+
+/* Import des polices */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+
+/* Généralités */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Corps de la page */
+body {
+    background: linear-gradient(135deg, #d4d4d4, #b5b5b5); /* Dégradé doux mais luxueux */
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 0;
+    overflow-x: hidden;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Conteneur principal */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* En-tête */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+    background: linear-gradient(145deg, #2c2c2c, #555); /* Dégradé sophistiqué */
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 100;
+    transition: padding 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+header:hover {
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px); /* Subtil effet de levée */
+}
+
+/* Logo */
+header .logo img {
+    height: 60px;
+    width: auto;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+header .logo img:hover {
+    transform: scale(1.15) rotate(7deg); /* Effet dynamique au survol */
+    opacity: 0.95;
+}
+
+/* Titre */
+header h1 {
+    font-family: 'Playfair Display', serif; /* Élégance classique */
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    background: linear-gradient(90deg, #ffd700, #f4b400); /* Gradient doré */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    transition: font-size 0.4s ease, transform 0.3s ease;
+}
+
+header h1:hover {
+    transform: scale(1.07);
+}
+
+/* Panier */
+.panier {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.panier a {
+    color: white;
+    font-size: 1.4rem;
+    padding: 15px 25px;
+    background: linear-gradient(145deg, #444, #666); /* Subtil dégradé pour le bouton */
+    border: 2px solid #ffd700;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: background 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.panier a:hover {
+    background: linear-gradient(145deg, #ffd700, #f4b400); /* Effet au survol */
+    transform: scale(1.1); /* Effet de mise en valeur */
+    box-shadow: 0 12px 36px rgba(255, 215, 0, 0.6); /* Ombre dorée */
+}
+
+/* Icône du panier */
+.panier i {
+    font-size: 2rem;
+    margin-right: 14px;
+}
+
+/* Badge pour le nombre d'articles */
+.panier-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #f44336;
+    color: white;
+    border-radius: 50%;
+    padding: 8px 14px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.panier a:hover .panier-count {
+    transform: scale(1.5);
+    transition: transform 0.3s ease;
+}
+
+/* Menu */
+nav {
+    background: linear-gradient(145deg, #2c2c2c, #555);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.4s ease;
+}
+
+nav:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 12px 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 35px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 14px;
+    display: block;
+    position: relative;
+    transition: color 0.4s ease, transform 0.4s ease, letter-spacing 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+    transform: translateY(-7px);
+    letter-spacing: 6px;
+}
+
+/* Pied de page */
+footer {
+    background: linear-gradient(145deg, #333, #444);
+    color: white;
+    text-align: center;
+    padding: 50px;
+    border-top: 4px solid #ffd700; /* Séparation dorée */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
+}
+
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.4s ease, transform 0.4s ease;
+}
+
+footer a:hover {
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Mobile (moins de 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    header .logo img {
+        height: 50px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    .panier a {
+        font-size: 1.2rem;
+        padding: 10px 15px;
+    }
+
+    footer {
+        padding: 30px 15px;
+    }
+}
+
+/* Tablette (de 768px à 1024px) */
+@media (max-width: 1024px) {
+    header {
+        padding: 20px 30px;
+    }
+
+    header .logo img {
+        height: 55px;
+    }
+
+    header h1 {
+        font-size: 2.8rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    nav ul li a {
+        font-size: 1.4rem;
+    }
+
+    .panier a {
+        font-size: 1.3rem;
+        padding: 12px 20px;
+    }
+
+    footer {
+        padding: 40px 20px;
+    }
+}
+
+/* Ordinateurs de bureau (plus de 1024px) */
+@media (min-width: 1025px) {
+    /* Ton style actuel, tout reste inchangé pour les grands écrans */
+}

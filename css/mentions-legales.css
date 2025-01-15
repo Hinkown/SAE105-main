@@ -1,0 +1,41 @@
+/* Styles pour la page des mentions légales */
+
+main {
+    padding: 40px;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.section p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    .section {
+        padding: 15px;
+    }
+}

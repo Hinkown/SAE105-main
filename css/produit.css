@@ -1,0 +1,175 @@
+/* Styles pour la page produit */
+.product-details {
+    padding: 40px 20px;
+    background-color: #fafafa;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+    flex-wrap: wrap; /* Ajouté pour permettre aux blocs de se réorganiser */
+}
+
+/* Image produit */
+.product-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Informations produit */
+.product-info {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-info h2 {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.product-info p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Formulaire produit */
+.product-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-form label {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.product-form select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+.product-form select:hover {
+    background-color: #f1f1f1;
+}
+
+/* Prix */
+.price {
+    font-size: 1.6rem;
+    color: #e74c3c;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Bouton ajouter au panier */
+.btn-add-to-cart {
+    padding: 15px;
+    font-size: 1.2rem;
+    background-color: #ffd700; /* Orange pour le luxe moderne */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-add-to-cart:hover {
+    background-color: #e69500; /* Orange plus foncé pour l’effet hover */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive pour la page produit */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Permet de mettre les blocs l'un en dessous de l'autre */
+        align-items: center;
+    }
+
+    .product-image img {
+        max-width: 80%; /* Réduit la taille de l'image pour les petits écrans */
+    }
+
+    .product-info {
+        width: 100%; /* Assure que la section info occupe toute la largeur disponible */
+        padding: 15px; /* Moins de padding pour optimiser l'espace */
+    }
+
+    .product-info h2 {
+        font-size: 2.3rem; /* Réduit la taille du titre */
+    }
+
+    .product-info p {
+        font-size: 1rem; /* Réduit la taille du texte */
+    }
+
+    .product-form select {
+        font-size: 0.9rem; /* Réduit la taille des sélecteurs */
+    }
+
+    .price {
+        font-size: 1.4rem; /* Réduit la taille du prix */
+    }
+
+    .btn-add-to-cart {
+        font-size: 1rem; /* Réduit la taille du bouton */
+        padding: 12px; /* Réduit le padding du bouton */
+    }
+}
+
+/* Responsive pour les très petits écrans */
+@media (max-width: 480px) {
+    .product-details {
+        padding: 20px 10px; /* Réduit le padding sur les petits écrans */
+    }
+
+    .product-info h2 {
+        font-size: 2rem; /* Encore plus petit sur très petit écran */
+    }
+
+    .product-info p {
+        font-size: 0.9rem; /* Réduit davantage la taille du texte */
+    }
+
+    .product-form select {
+        font-size: 0.8rem; /* Réduit la taille des sélecteurs */
+    }
+
+    .price {
+        font-size: 1.2rem; /* Réduit le prix */
+    }
+
+    .btn-add-to-cart {
+        font-size: 1rem; /* Réduit la taille du bouton */
+        padding: 12px; /* Réduit le padding du bouton */
+    }
+}

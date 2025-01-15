@@ -1,0 +1,166 @@
+/* Section de contact */
+.contact {
+    padding: 80px 20px;
+    background: linear-gradient(145deg, #f7f7f7, #ffffff); /* Nuance claire et moderne */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1); /* Ombre plus marquée pour l'effet de profondeur */
+    margin-bottom: 60px;
+    border-radius: 20px;
+    font-family: 'Helvetica Neue', sans-serif; /* Police plus moderne */
+    color: #333;
+    text-align: center;
+}
+
+/* Conteneur */
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permet le passage à la ligne si nécessaire */
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* Partie gauche : Plan d'adresse */
+.contact-map {
+    width: 48%; /* largeur de chaque bloc */
+    padding: 30px;
+    background: #ffffff;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    object-fit: cover;
+}
+
+/* Partie droite : Informations de contact et réseaux sociaux */
+.contact-info {
+    width: 48%; /* largeur de chaque bloc */
+    text-align: left;
+    padding: 30px;
+    background: #ffffff;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-info:hover {
+    transform: translateY(-10px); /* Effet de levée pour plus de dynamisme */
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.15); /* Ombre plus forte au survol */
+}
+
+/* Texte d'aide */
+.help-text {
+    font-size: 1.4rem;
+    color: #777;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+/* Détails de contact */
+.contact-details p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 20px 0;
+}
+
+/* Liens vers réseaux sociaux */
+.social-media {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Liens des réseaux sociaux */
+.social-media a {
+    margin: 0 25px;
+    display: inline-block;
+}
+
+/* Icônes des réseaux sociaux */
+.social-media img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.social-media img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Responsive pour la page de contact */
+@media (max-width: 768px) {
+    .contact {
+        padding: 60px 20px;
+    }
+
+    .container {
+        flex-direction: row; /* Aligne les blocs côte à côte */
+        gap: 15px; /* Réduit l'espace entre les blocs */
+        justify-content: space-between;
+    }
+
+    .contact-map, .contact-info {
+        width: 48%; /* Les deux blocs restent côte à côte avec 48% de largeur */
+        margin-bottom: 20px;
+    }
+
+    .contact h2 {
+        font-size: 2.6rem;
+        color: #333;
+    }
+
+    .contact p, .help-text {
+        font-size: 1.3rem;
+    }
+
+    .social-media img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Responsive pour les très petits écrans (mobiles) */
+@media (max-width: 480px) {
+    .contact {
+        padding: 40px 20px;
+    }
+
+    .container {
+        flex-direction: row; /* Garde les blocs côte à côte */
+        align-items: flex-start; /* Évite que les éléments s'empilent */
+        gap: 10px; /* Réduit encore l'écart */
+    }
+
+    .contact-map, .contact-info {
+        width: 48%; /* Assure que les deux blocs restent côte à côte */
+        margin-bottom: 20px;
+    }
+
+    .contact h2 {
+        font-size: 2.2rem;
+    }
+
+    .help-text, .contact-details p {
+        font-size: 1.1rem;
+    }
+
+    .social-media a {
+        margin: 0 15px;
+    }
+
+    .social-media img {
+        width: 50px;
+        height: 50px;
+    }
+}

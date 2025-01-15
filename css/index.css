@@ -1,0 +1,481 @@
+/* Section d'introduction */
+.intro {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #ffffff, #f7f7f7);
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    margin-bottom: 80px;
+    border-radius: 20px;
+    transition: box-shadow 0.5s ease, transform 0.4s ease;
+}
+
+.intro:hover {
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+}
+
+.intro h2 {
+    font-size: 4rem;
+    color: #222;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(90deg, #ffba08, #faa307);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.4s ease, letter-spacing 0.3s ease;
+}
+
+.intro h2:hover {
+    transform: scale(1.1);
+    letter-spacing: 8px;
+}
+
+.intro p {
+    font-size: 1.8rem;
+    color: #555;
+    margin: 20px auto;
+    line-height: 1.8;
+    max-width: 800px;
+    font-weight: 400;
+    opacity: 0.9;
+    transition: color 0.3s ease, opacity 0.4s ease;
+}
+
+.intro:hover p {
+    opacity: 1;
+    color: #333;
+}
+
+/* Section vidéo */
+.video-section {
+    padding: 100px 30px;
+    background: #ffffff;
+    text-align: center;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    margin-bottom: 80px;
+    border-radius: 25px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.video-section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.2);
+}
+
+.video-section h2 {
+    font-size: 4rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #222;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    background: linear-gradient(90deg, #ffba08, #faa307);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, letter-spacing 0.3s ease;
+}
+
+.video-section h2:hover {
+    transform: scale(1.1);
+    letter-spacing: 8px;
+}
+
+.video-section p {
+    font-size: 1.8rem;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 400;
+    opacity: 0.85;
+    transition: color 0.3s ease, opacity 0.4s ease;
+}
+
+.video-section:hover p {
+    opacity: 1;
+    color: #333;
+}
+
+.video-container {
+    max-width: 1000px;
+    margin: 40px auto 0;
+    padding: 30px;
+    background-color: #fdfdfd;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.video-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.25);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.video-container video:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.video-container figcaption {
+    font-size: 1.5rem;
+    color: #777;
+    margin-top: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Animation de la section vidéo */
+.video-section h2, .video-container video {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1.2s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Carrousel */
+/* Carrousel */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;  /* Largeur maximale du carrousel plus grande */
+    height: 350px;  /* Hauteur spécifique pour un format plus grand */
+    margin: auto;  /* Centrer le carrousel */
+    overflow: hidden;  /* Cacher les éléments qui débordent */
+    border-radius: 15px;  /* Ajouter des coins arrondis au carrousel */
+    background-color: white;  
+    margin-bottom: 80px;
+    border-radius: 20px;
+    
+}
+
+
+/* Conteneur des images */
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;  /* Transition fluide lors du changement d'image */
+    width: 100%;  /* Les images s'étendent sur toute la largeur du carrousel */
+}
+
+/* Chaque image */
+.carousel-item {
+    flex: 0 0 100%;  /* Chaque image occupe 100% de la largeur du carrousel */
+    box-sizing: border-box;
+}
+
+/* Images du carrousel */
+.carousel-item img {
+    width: auto;  /* Les images remplissent toute la largeur du carrousel */
+    height: 350px;  /* Ajuste la hauteur des images à celle du carrousel */
+    object-fit: contain;  /* Les images sont redimensionnées pour être entièrement visibles */
+    border-radius: 15px;  /* Ajouter des coins arrondis aux images */
+    margin: 0 auto;  /* Centrer l'image dans son conteneur */
+    display: block;  /* Assure que l'image est un bloc (utile pour le centrage) */
+}
+
+
+/* Boutons de navigation */
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+/* Animation de la section du carrousel */
+.carousel-section h2, .carousel-item img {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1.2s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.product-carousel:hover {
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+}
+
+.product-carousel h2 {
+    font-size: 4rem;
+    color: #222;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(90deg, #ffba08, #faa307);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.4s ease, letter-spacing 0.3s ease;
+}
+
+.product-carousel h2:hover {
+    transform: scale(1.1);
+    letter-spacing: 8px;
+}
+
+h2 {
+    font-size: 4rem;
+    color: #222;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(90deg, #ffba08, #faa307);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.4s ease, letter-spacing 0.3s ease;
+    text-align: center;
+}
+
+h2:hover {
+    transform: scale(1.1);
+    letter-spacing: 8px;
+}
+
+/* Généralités */
+body {
+    font-size: 16px;
+}
+
+/* En-tête */
+header {
+    padding: 25px 40px;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+/* Panier */
+.panier a {
+    font-size: 1.4rem;
+}
+
+.panier i {
+    font-size: 2rem;
+}
+
+/* Menu */
+nav ul li {
+    margin: 0 35px;
+}
+
+nav ul li a {
+    font-size: 1.5rem;
+}
+
+/* Pied de page */
+footer {
+    padding: 50px;
+}
+
+/* Carrousel */
+.carousel {
+    height: 350px;
+}
+
+/* Section d'introduction */
+.intro {
+    padding: 100px 0;
+}
+
+/* Section vidéo */
+.video-section {
+    padding: 100px 30px;
+}
+
+/* Carrousel */
+.carousel {
+    height: 350px;
+}
+
+/* Pour les petits écrans */
+@media screen and (max-width: 768px) {
+    /* En-tête */
+    header {
+        padding: 20px 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    /* Menu */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    /* Panier */
+    .panier a {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+
+    /* Section d'introduction */
+    .intro {
+        padding: 60px 20px;
+    }
+
+    .intro h2 {
+        font-size: 2.5rem;
+    }
+
+    .intro p {
+        font-size: 1.4rem;
+    }
+
+    /* Section vidéo */
+    .video-section {
+        padding: 60px 20px;
+    }
+
+    .video-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .video-section p {
+        font-size: 1.4rem;
+    }
+
+    /* Carrousel */
+    .carousel {
+        height: 250px;
+    }
+
+    .carousel-item img {
+        height: 250px;
+    }
+
+    /* Modifier la taille du texte dans le carrousel */
+    .carousel-button {
+        font-size: 20px;
+    }
+
+    /* Pied de page */
+    footer {
+        padding: 30px;
+    }
+}
+
+/* Pour les très petits écrans */
+@media screen and (max-width: 480px) {
+    /* En-tête */
+    header {
+        padding: 15px 20px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Menu */
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    /* Section d'introduction */
+    .intro {
+        padding: 50px 20px;
+    }
+
+    .intro h2 {
+        font-size: 2rem;
+    }
+
+    .intro p {
+        font-size: 1.2rem;
+    }
+
+    /* Section vidéo */
+    .video-section {
+        padding: 50px 20px;
+    }
+
+    .video-section h2 {
+        font-size: 2rem;
+    }
+
+    .video-section p {
+        font-size: 1.2rem;
+    }
+
+    /* Carrousel */
+    .carousel {
+        height: 200px;
+    }
+
+    .carousel-item img {
+        height: 200px;
+    }
+
+    /* Pied de page */
+    footer {
+        padding: 20px;
+    }
+}
